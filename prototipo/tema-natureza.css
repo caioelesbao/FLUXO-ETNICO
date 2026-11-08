@@ -1,0 +1,84 @@
+/* Paleta "Natureza" — terceira opção de cores do Fluxo Étnico.
+   Ativada com <html data-paleta="natureza">. Funciona nos modos claro e escuro (data-theme="dark").
+   Cores de referência: sálvia #C3C9A5 · areia #E5DDBE · creme #F1ECDF · verde-oliva #75794D · musgo #756F4D · terra #84714F · oliva #868C1E · mostarda #AE9A1E */
+
+:root[data-paleta="natureza"] {
+  --bg: #d8dbbf;
+  --paper: #f1ecdf;
+  --surface: #fbf9f2;
+  --card: #f3eedf;
+  --soft: #e5e0c6;
+  --line: #dcd6b9;
+  --line2: #c3bc98;
+
+  --fg: #3b3d24;
+  --muted: #7d7b5f;
+
+  --ink: #5f6340;
+  --on-ink: #fbf9f2;
+  --panel: #4f5230;
+  --frame: #75794d;
+  --pill: #8e8a68;
+
+  --lime: #c9bb45;          /* destaque principal: mostarda */
+  --lime-hover: #b8aa36;
+  --on-lime: #33351d;
+  --lime-soft: #eeeab9;
+
+  --orange: #c07a3a;
+  --orange-hover: #aa6a2d;
+  --orange-soft: #f3dfc9;
+  --on-orange: #ffffff;
+
+  --red: #a8402f;
+  --red-soft: #f3dcd3;
+  --amber-soft: #f1ebc4;
+  --amber-fg: #7a6a14;
+  --green: #868c1e;
+
+  --shadow: rgba(59, 61, 36, 0.5);
+
+  --act-in: #4f8a2f;
+  --act-in-h: #437826;
+  --act-out: #b83a2c;
+  --act-out-h: #a02f23;
+  --act-ag: #1b8fa0;
+  --act-ag-h: #167b8a;
+  --red-hl: #b83a2c;
+  --red-hl-h: #a02f23;
+}
+
+:root[data-paleta="natureza"][data-theme="dark"] {
+  --bg: #12140b;
+  --paper: #1c1f12;
+  --surface: #262a18;
+  --card: #2f341f;
+  --soft: #3a4026;
+  --line: #474e30;
+  --line2: #5a623c;
+
+  --fg: #eeeadb;
+  --muted: #aaa98a;
+
+  --ink: #c3c9a5;
+  --on-ink: #1c1f12;
+  --panel: #2f341f;
+  --frame: #2f341f;
+  --pill: #4e5535;
+
+  --lime-soft: #3b3a16;
+  --orange-soft: #4a2f1a;
+  --red-soft: #46261f;
+  --amber-soft: #433a18;
+  --amber-fg: #e0c96a;
+  --shadow: rgba(0, 0, 0, 0.8);
+
+  --act-in: #5a9d3b;
+  --act-in-h: #6aae4a;
+  --act-out: #d2453b;
+  --act-out-h: #e0574d;
+  --act-ag: #26a6ba;
+  --act-ag-h: #38b8cc;
+  --red-hl: #d2453b;
+  --red-hl-h: #e0574d;
+}

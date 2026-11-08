@@ -1,0 +1,104 @@
+/* Paleta "Terra" — segunda opção de cores do Fluxo Étnico.
+   Ativada com <html data-paleta="terra">. Funciona nos modos claro e escuro (data-theme="dark").
+   Cores de referência: oliva #A5963A · sálvia #C0C38E · creme #F6EBB8 · laranja #C9733A · marrom #734840 · bege #E0C4A8 */
+
+:root[data-paleta="terra"] {
+  --bg: #e4d3be;
+  --paper: #f4ebdd;
+  --surface: #fffbf3;
+  --card: #f6ecd9;
+  --soft: #eadfc9;
+  --line: #e0d2ba;
+  --line2: #cdbb9f;
+
+  --fg: #4a2e28;
+  --muted: #8c7466;
+
+  --ink: #734840;
+  --on-ink: #fff8ec;
+  --panel: #5a352f;
+  --frame: #6b4a42;
+  --pill: #a58b7c;
+
+  --lime: #c0c38e;          /* destaque principal: sálvia */
+  --lime-hover: #aeb27a;
+  --on-lime: #3e2723;
+  --lime-soft: #eceecf;
+
+  --orange: #c9733a;
+  --orange-hover: #b5632d;
+  --orange-soft: #f6e0cf;
+  --on-orange: #ffffff;
+
+  --red: #b3382c;
+  --red-soft: #f6dcd6;
+  --amber-soft: #f6ecc9;
+  --amber-fg: #7d6a1c;
+  --green: #a5963a;         /* oliva */
+
+  --shadow: rgba(74, 46, 40, 0.5);
+
+  /* Botões de ação (só existem nesta paleta) */
+  --act-in: #3b8a4b;        /* registrar entrada: verde */
+  --act-in-h: #2f7a40;
+  --act-out: #c0342b;       /* registrar saída: vermelho */
+  --act-out-h: #a82b23;
+  --act-ag: #0e8ea3;        /* novo agendamento: azul ciano */
+  --act-ag-h: #0a7a8d;
+  --red-hl: #c0342b;        /* destaque vermelho de botões importantes */
+  --red-hl-h: #a82b23;
+}
+
+:root[data-paleta="terra"][data-theme="dark"] {
+  --bg: #1b1310;
+  --paper: #251a16;
+  --surface: #30231e;
+  --card: #3a2b25;
+  --soft: #46352e;
+  --line: #53413a;
+  --line2: #66524a;
+
+  --fg: #f3e9da;
+  --muted: #b3a092;
+
+  --ink: #e0c4a8;
+  --on-ink: #2a1a15;
+  --panel: #3a2a24;
+  --frame: #3a2a24;
+  --pill: #5a463e;
+
+  --lime-soft: #3b3e22;
+  --orange-soft: #4f2d1c;
+  --red-soft: #4a2320;
+  --amber-soft: #4a3a1a;
+  --amber-fg: #e3c46f;
+  --shadow: rgba(0, 0, 0, 0.8);
+
+  --act-in: #4a9d5a;
+  --act-in-h: #5aae6a;
+  --act-out: #d2453b;
+  --act-out-h: #e0574d;
+  --act-ag: #1aa6bc;
+  --act-ag-h: #2bb8ce;
+  --red-hl: #d2453b;
+  --red-hl-h: #e0574d;
+}
+
+/* Botões de ação por função — valem para as paletas Terra e Natureza (a Rhema segue o guia original) */
+:root[data-paleta] .btn.act-in  { background: var(--act-in);  color: #fff; }
+:root[data-paleta] .btn.act-in:hover  { background: var(--act-in-h); }
+:root[data-paleta] .btn.act-out { background: var(--act-out); color: #fff; }
+:root[data-paleta] .btn.act-out:hover { background: var(--act-out-h); }
+:root[data-paleta] .btn.act-ag  { background: var(--act-ag);  color: #fff; }
+:root[data-paleta] .btn.act-ag:hover  { background: var(--act-ag-h); }
+:root[data-paleta] .seg button.on.act-in  { background: var(--act-in);  color: #fff; }
+:root[data-paleta] .seg button.on.act-out { background: var(--act-out); color: #fff; }
+
+/* Destaque vermelho: ações importantes e que não têm volta */
+:root[data-paleta] .btn.crit { background: var(--red-hl); color: #fff; }
+:root[data-paleta] .btn.crit:hover { background: var(--red-hl-h); }
+:root[data-paleta] .btn.crit:disabled { background: var(--red-hl); }
+:root[data-paleta] .btn.danger { background: var(--red-soft); color: var(--red-hl); box-shadow: inset 0 0 0 1.5px var(--red-hl); }
+:root[data-paleta] .btn.danger:hover { background: var(--red-hl); color: #fff; }
+:root[data-paleta] .btn.danger-solid { background: var(--red-hl); color: #fff; }
+:root[data-paleta] .chip.red { background: var(--red-soft); color: var(--red-hl); }

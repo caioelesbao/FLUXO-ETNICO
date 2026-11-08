@@ -1,0 +1,13 @@
+# segredos e arquivos gerados — nunca versionar
+.env
+**/.env
+publicar/dist/
+publicar/node_modules/
+.vercel/
+node_modules/
+*.zip
+._*
+.DS_Store
+.claude/
+# material de referência pesado fora do repositório
+LINK/

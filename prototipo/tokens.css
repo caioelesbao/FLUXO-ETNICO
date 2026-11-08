@@ -1,0 +1,108 @@
+/* Padrão visual Rhema — tokens.
+   Cole este arquivo no projeto e use só as variáveis; não escreva cores soltas nas telas.
+   Tema Light é o padrão. Tema Black é ativado com <html data-theme="dark">. */
+
+:root {
+  /* ---- Marca (valores fixos) ---- */
+  --rhema-grafite: #3c3c3b;
+  --rhema-lime: #cfdc75;
+  --rhema-lime-hover: #c2d05f;
+
+  /* ---- Tema Light ---- */
+  --bg: #d9d9d6;            /* fundo da página, atrás da moldura */
+  --paper: #ededed;         /* superfície da moldura / área de conteúdo */
+  --surface: #ffffff;       /* cards principais */
+  --card: #f7f7f6;          /* blocos secundários dentro de cards */
+  --soft: #e4e4e2;          /* trilhos, divisórias suaves */
+  --line: #dcdcd9;          /* bordas de campos e separadores */
+  --line2: #c9c9c5;         /* bordas um pouco mais fortes */
+
+  --fg: #3c3c3b;            /* texto principal */
+  --muted: #8a8a86;         /* rótulos e textos de apoio */
+
+  --ink: #3c3c3b;           /* destaque escuro: itens ativos, chips escuros */
+  --on-ink: #ffffff;        /* texto sobre --ink */
+  --panel: #3c3c3b;         /* painel grafite da marca (card de destaque escuro) */
+  --frame: #5b5b59;         /* moldura cinza de telas de detalhe */
+  --pill: #8d8d8a;          /* botão escuro secundário */
+
+  --lime: #cfdc75;          /* destaque principal e botão primário */
+  --lime-hover: #c2d05f;
+  --on-lime: #3c3c3b;       /* texto sobre lime — sempre grafite */
+  --lime-soft: #eef2cc;
+
+  --orange: #d97757;        /* alerta (ex.: atrasado). Cor de alerta, não decoração */
+  --orange-hover: #c9683f;
+  --orange-soft: #f6e0d6;
+  --on-orange: #ffffff;
+
+  --red: #c4553b;           /* erro e texto de atraso */
+  --red-soft: #f5e0da;
+  --amber-soft: #f6ecd3;
+  --amber-fg: #8a6a1e;
+  --green: #6f9a4f;
+
+  --shadow: rgba(60, 60, 59, 0.5);
+
+  /* ---- Tipografia ---- */
+  --font: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;         /* títulos e números */
+  --fw-semibold: 600;
+
+  /* ---- Forma ---- */
+  --r-xl: 28px;             /* moldura e modais */
+  --r-lg: 20px;             /* cards */
+  --r-md: 14px;             /* blocos menores e campos */
+  --r-pill: 999px;          /* botões, chips, filtros */
+
+  /* ---- Espaçamento (base 4px) ---- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px;
+
+  /* ---- Movimento ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 0.2s;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0b0b;
+  --paper: #161615;
+  --surface: #212120;
+  --card: #2a2a29;
+  --soft: #333332;
+  --line: #3a3a38;
+  --line2: #4a4a48;
+
+  --fg: #ededed;
+  --muted: #9a9a95;
+
+  --ink: #ededed;
+  --on-ink: #1b1b1a;
+  --panel: #2c2c2b;
+  --frame: #2c2c2b;
+  --pill: #444442;
+
+  --lime-soft: #343a1d;
+  --orange-soft: #4a2c20;
+  --red-soft: #46261f;
+  --amber-soft: #43381c;
+  --amber-fg: #e3c46f;
+  --shadow: rgba(0, 0, 0, 0.8);
+
+  color-scheme: dark;
+}
+
+/* ---- Base ---- */
+html, body { margin: 0; }
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--lime); color: var(--on-lime); }
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }

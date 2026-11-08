@@ -1,0 +1,123 @@
+/* Padrão visual Rhema — componentes.
+   Depende de tokens.css. Cada classe é um bloco pronto para copiar. */
+
+/* ---- Botões ---- */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--s-2);
+  height: 42px; padding: 0 18px; border: 0; border-radius: var(--r-pill);
+  background: var(--surface); color: var(--fg);
+  font: inherit; font-weight: var(--fw-medium); white-space: nowrap; cursor: pointer;
+  transition: background var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn.primary { background: var(--lime); color: var(--on-lime); }
+.btn.primary:hover { background: var(--lime-hover); }
+.btn.dark { background: var(--ink); color: var(--on-ink); }
+.btn.ghost { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.btn.danger { background: transparent; color: var(--red); box-shadow: inset 0 0 0 1px var(--line); }
+.btn.danger-solid { background: var(--orange); color: var(--on-orange); }
+.btn.danger-solid:hover { background: var(--orange-hover); }
+.btn.sm { height: 32px; padding: 0 12px; font-size: 13px; }
+.btn.icon { width: 42px; padding: 0; justify-content: center; border-radius: 50%; }
+
+/* ---- Campos ---- */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field > label { font-size: 12px; color: var(--muted); }
+.input {
+  height: 42px; padding: 0 12px; width: 100%;
+  border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--surface); color: var(--fg); font: inherit; outline: none;
+}
+.input:focus { border-color: var(--fg); }
+textarea.input { height: auto; min-height: 90px; padding: 10px 12px; resize: vertical; }
+
+/* ---- Cards ---- */
+.card { background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); min-width: 0; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); margin-bottom: var(--s-3); }
+.card-head h2 { margin: 0; font-size: 19px; font-weight: var(--fw-medium); letter-spacing: -0.02em; }
+.card-head p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+
+/* Card de número (KPI). O destaque usa lime ou alerta, nunca os dois juntos. */
+.kpi {
+  background: var(--surface); border: 0; border-radius: var(--r-lg); padding: 16px 18px;
+  display: flex; flex-direction: column; gap: 4px; text-align: left; color: var(--fg);
+  transition: transform var(--t-fast) var(--ease);
+}
+.kpi:hover { transform: translateY(-2px); }
+.kpi > span { font-size: 13px; color: var(--muted); }
+.kpi > strong { margin-top: 18px; font-size: 40px; font-weight: var(--fw-medium); letter-spacing: -0.04em; line-height: 1; }
+.kpi > em { font-style: normal; font-size: 12px; color: var(--muted); }
+.kpi.hl { background: var(--lime); color: var(--on-lime); }
+.kpi.hl > span, .kpi.hl > em { color: var(--on-lime); }
+.kpi.alert { background: var(--orange); color: var(--on-orange); }
+.kpi.alert > span, .kpi.alert > em { color: var(--on-orange); }
+
+/* Card de destaque escuro (ex.: "Hoje") */
+.panel-dark { background: var(--panel); color: #fff; border-radius: var(--r-lg); padding: var(--s-5); }
+
+/* ---- Chips e status ---- */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: var(--r-pill);
+  background: var(--surface); color: var(--fg); font-size: 12px; white-space: nowrap;
+}
+.chip i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+.chip.lime { background: var(--lime); color: var(--on-lime); }
+.chip.dark { background: var(--ink); color: var(--on-ink); }
+.chip.soft { background: var(--card); }
+.chip.alert { background: var(--orange-soft); color: var(--orange); }
+.chip.alert i { background: var(--orange); }
+.chip.red { background: var(--red-soft); color: var(--red); }
+.chip.amber { background: var(--amber-soft); color: var(--amber-fg); }
+
+/* Bolinha colorida de estado: a cor vem de --dot (definida por quem usa) */
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--muted)); display: inline-block; }
+
+/* ---- Filtros / abas (pílulas) ---- */
+.seg { display: inline-flex; gap: 2px; background: var(--card); border-radius: var(--r-pill); padding: 3px; }
+.seg button {
+  border: 0; background: none; border-radius: var(--r-pill); padding: 7px 14px;
+  font: inherit; color: var(--muted); cursor: pointer;
+}
+.seg button.on { background: var(--ink); color: var(--on-ink); }
+
+/* ---- Avatar ---- */
+.avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center; flex: none;
+  background: var(--soft); color: var(--fg); font-size: 12px; font-weight: 600;
+}
+.avatar.sm { width: 26px; height: 26px; font-size: 10px; }
+.avatar.lg { width: 52px; height: 52px; font-size: 17px; }
+
+/* ---- Listas ---- */
+.list { display: flex; flex-direction: column; }
+.li {
+  display: flex; align-items: center; gap: var(--s-3);
+  padding: 11px 0; border-bottom: 1px solid var(--soft); cursor: pointer;
+}
+.li:last-child { border-bottom: 0; }
+.li .grow { flex: 1; min-width: 0; }
+.li .t { font-weight: var(--fw-medium); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.li .s { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.empty { padding: 18px 0; text-align: center; color: var(--muted); font-size: 13px; }
+
+/* ---- Barra de progresso ---- */
+.bar { height: 6px; border-radius: var(--r-pill); background: var(--soft); overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--lime); border-radius: var(--r-pill); transition: width .3s var(--ease); }
+
+/* ---- Modal ---- */
+.overlay { position: fixed; inset: 0; background: rgba(42, 42, 41, .45); display: grid; place-items: center; padding: var(--s-4); z-index: 50; }
+.modal {
+  background: var(--paper); border-radius: var(--r-xl); width: min(640px, 100%);
+  max-height: calc(100vh - 32px); overflow: auto; padding: var(--s-6);
+  display: flex; flex-direction: column; gap: var(--s-4);
+}
+.modal-head { display: flex; justify-content: space-between; align-items: center; }
+.modal-head h2 { margin: 0; font-size: 22px; font-weight: var(--fw-medium); }
+.modal-foot { display: flex; gap: var(--s-2); justify-content: flex-end; flex-wrap: wrap; }
+.modal-foot .left { margin-right: auto; }
+
+/* ---- Mensagem de erro ---- */
+.err { color: var(--red); font-size: 13px; min-height: 18px; }
